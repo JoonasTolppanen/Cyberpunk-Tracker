@@ -1,0 +1,101 @@
+:root {
+    --bg-dark: #2b2b2b;
+    --border-accent: #F75049;
+    --button-bg: #3a3a3a;
+    --button-hover: #F75049;
+    --text-light: #f0f0f0;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    margin: 0;
+    background-color: #1e1e1e;
+    color: var(--text-light);
+}
+
+/* ===== TOP HEADER ===== */
+.top-bar {
+    width: 100%;
+    height: 80px;
+    background-color: var(--bg-dark);
+    border-bottom: 3px solid var(--border-accent);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 30px;
+}
+
+.site-name {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* ===== LAYOUT ===== */
+.main-container {
+    display: flex;
+    height: calc(100vh - 80px);
+}
+
+/* ===== LEFT SIDEBAR ===== */
+.left-panel {
+    width: 260px;
+    background-color: var(--bg-dark);
+    border-right: 3px solid var(--border-accent);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* ===== NAV BUTTONS ===== */
+.menu-button {
+    text-decoration: none;
+    background-color: var(--button-bg);
+    border: 2px solid var(--border-accent);
+    color: var(--text-light);
+    padding: 14px;
+    text-align: center;
+    font-size: 16px;
+    transition: all 0.2s ease;
+}
+
+.menu-button:hover {
+    background-color: var(--button-hover);
+    color: #000;
+}
+
+.menu-button.active {
+    background-color: var(--border-accent);
+    color: #000;
+    font-weight: bold;
+}
+
+/* ===== CONTENT ===== */
+.content {
+    flex: 1;
+    padding: 30px;
+}
+
+/* ===== IMAGE PLACEHOLDER ===== */
+.image-placeholder {
+    width: 50%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+    color: var(--border-accent);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.image-placeholder img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
