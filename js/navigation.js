@@ -10,11 +10,21 @@ document.addEventListener("DOMContentLoaded", () => {
             })
             .then(html => {
                 content.innerHTML = html;
+                
+                // After loading content, check if we need to load bio data
+                if (page === 'bio.html' && typeof window.loadBioDataToDisplay === 'function') {
+                    window.loadBioDataToDisplay();
+                } else if (page === 'bio-edit.html' && typeof window.loadBioDataToEdit === 'function') {
+                    window.loadBioDataToEdit();
+                }
             })
             .catch(() => {
                 content.innerHTML = "<h1>Error loading page</h1>";
             });
     }
+
+    // Make loadPage available globally for bio edit/view switching
+    window.loadBioPage = loadPage;
 
     function setActive(hash) {
         buttons.forEach(btn => {
