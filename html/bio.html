@@ -12,30 +12,32 @@
         </div>
 
         <!-- Basic Info -->
-        <div class="info-field">
-            <label>Handle</label>
-            <input type="text" placeholder="Character name">
-        </div>
+        <div class="basic-info-container">
+            <div class="info-field">
+                <label>Handle</label>
+                <input type="text" placeholder="Character name">
+            </div>
 
-        <div class="info-field">
-            <label>Role</label>
-            <input type="text" placeholder="Character role">
-        </div>
-
-        <div class="info-field-split">
-            <div class="info-field-left">
+            <div class="info-field">
                 <label>Role</label>
-                <input type="text" placeholder="Role">
+                <input type="text" placeholder="Character role">
             </div>
-            <div class="info-field-right">
-                <label>RANK</label>
-                <input type="text" class="small-input">
-            </div>
-        </div>
 
-        <div class="info-field">
-            <label>Ability</label>
-            <input type="text" placeholder="Ability">
+            <div class="info-field-split">
+                <div class="info-field-left">
+                    <label>Role</label>
+                    <input type="text" placeholder="Role">
+                </div>
+                <div class="info-field-right">
+                    <label>RANK</label>
+                    <input type="text" class="small-input">
+                </div>
+            </div>
+
+            <div class="info-field">
+                <label>Ability</label>
+                <input type="text" placeholder="Ability">
+            </div>
         </div>
 
         <!-- Stats Grid -->
@@ -43,51 +45,35 @@
             <div class="stat-row">
                 <label>Humanity</label>
                 <div class="stat-values">
-                    <span class="stat-label">CURRENT</span>
-                    <input type="number" value="0" class="stat-input">
-                    <span class="stat-label">OUT OF</span>
-                    <input type="number" value="0" class="stat-input">
+                    <span class="stat-label">Current / Out of</span>
                 </div>
             </div>
 
             <div class="stat-row">
                 <label>Hit Points</label>
                 <div class="stat-values">
-                    <span class="stat-label">CURRENT</span>
-                    <input type="number" value="10" class="stat-input">
-                    <span class="stat-label">OUT OF</span>
-                    <input type="number" value="10" class="stat-input">
+                    <span class="stat-label">Current / Out of</span>
                 </div>
-            </div>
-
-            <div class="stat-row">
-                <label>Seriously Wounded</label>
-                <input type="number" value="5" class="stat-input-single">
-            </div>
-
-            <div class="stat-note">
-                -2 to all Actions when Seriously Wounded
-            </div>
-
-            <div class="stat-row">
-                <label>Critical Injuries</label>
-                <textarea class="stat-textarea" rows="2"></textarea>
-            </div>
-
-            <div class="stat-row">
-                <label>Addictions</label>
-                <textarea class="stat-textarea" rows="2"></textarea>
             </div>
 
             <div class="stat-row">
                 <label>Death Save</label>
                 <div class="stat-values">
-                    <span class="stat-label">DV</span>
-                    <input type="text" class="stat-input-small">
-                    <span class="stat-label">PENALTY</span>
-                    <input type="text" class="stat-input-small">
+                    <span class="stat-label">DV / Penalty</span>
                 </div>
             </div>
+        </div>
+
+        <!-- Critical Injuries Box -->
+        <div class="critical-box">
+            <label>CRITICAL INJURIES</label>
+            <textarea rows="3"></textarea>
+        </div>
+
+        <!-- Addictions Box -->
+        <div class="critical-box">
+            <label>ADDICTIONS</label>
+            <textarea rows="3"></textarea>
         </div>
 
     </div>
@@ -201,7 +187,7 @@
 
         <!-- Identity Features -->
         <div class="identity-section">
-            <h4>Identity ng Features</h4>
+            <h4>IDENTIFYING FEATURES</h4>
             
             <div class="identity-field">
                 <label>Your (General) Cultural Region:</label>
