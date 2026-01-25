@@ -33,7 +33,7 @@ const fieldMap = [
     { edit: 'enemy-3-throw', display: 'display-enemy-3-throw' },
     { edit: 'enemy-3-happen', display: 'display-enemy-3-happen' },
     { edit: 'improvement-current', display: 'display-improvement-current' },
-    { edit: 'improvement-outof', display: 'display-improvement-outof' },
+    { edit: 'reputation-events', display: 'display-reputation-events' },
     { edit: 'reputation', display: 'display-reputation' },
     { edit: 'cultural-region', display: 'display-cultural-region' },
     { edit: 'clothing-style', display: 'display-clothing-style' },
