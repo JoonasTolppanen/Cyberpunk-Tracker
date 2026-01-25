@@ -1,9 +1,229 @@
-<div>
-    <h1>Bio</h1>
+<div class="bio-container">
+    
+    <!-- Left Column: Character Stats and Portrait -->
+    <div class="bio-left-column">
+        
+        <!-- Portrait Section -->
+        <div class="portrait-section">
+            <div class="portrait-placeholder">
+                <img src="../images/jakki.png" alt="Character Portrait">
+                <div class="portrait-label">Portrait</div>
+            </div>
+        </div>
 
-    <div class="image-placeholder">
-        <img src="../images/jakki.png" alt="Jakki">
+        <!-- Basic Info -->
+        <div class="info-field">
+            <label>Handle</label>
+            <input type="text" placeholder="Character name">
+        </div>
+
+        <div class="info-field">
+            <label>Role</label>
+            <input type="text" placeholder="Character role">
+        </div>
+
+        <div class="info-field-split">
+            <div class="info-field-left">
+                <label>Role</label>
+                <input type="text" placeholder="Role">
+            </div>
+            <div class="info-field-right">
+                <label>RANK</label>
+                <input type="text" class="small-input">
+            </div>
+        </div>
+
+        <div class="info-field">
+            <label>Ability</label>
+            <input type="text" placeholder="Ability">
+        </div>
+
+        <!-- Stats Grid -->
+        <div class="stats-grid">
+            <div class="stat-row">
+                <label>Humanity</label>
+                <div class="stat-values">
+                    <span class="stat-label">CURRENT</span>
+                    <input type="number" value="0" class="stat-input">
+                    <span class="stat-label">OUT OF</span>
+                    <input type="number" value="0" class="stat-input">
+                </div>
+            </div>
+
+            <div class="stat-row">
+                <label>Hit Points</label>
+                <div class="stat-values">
+                    <span class="stat-label">CURRENT</span>
+                    <input type="number" value="10" class="stat-input">
+                    <span class="stat-label">OUT OF</span>
+                    <input type="number" value="10" class="stat-input">
+                </div>
+            </div>
+
+            <div class="stat-row">
+                <label>Seriously Wounded</label>
+                <input type="number" value="5" class="stat-input-single">
+            </div>
+
+            <div class="stat-note">
+                -2 to all Actions when Seriously Wounded
+            </div>
+
+            <div class="stat-row">
+                <label>Critical Injuries</label>
+                <textarea class="stat-textarea" rows="2"></textarea>
+            </div>
+
+            <div class="stat-row">
+                <label>Addictions</label>
+                <textarea class="stat-textarea" rows="2"></textarea>
+            </div>
+
+            <div class="stat-row">
+                <label>Death Save</label>
+                <div class="stat-values">
+                    <span class="stat-label">DV</span>
+                    <input type="text" class="stat-input-small">
+                    <span class="stat-label">PENALTY</span>
+                    <input type="text" class="stat-input-small">
+                </div>
+            </div>
+        </div>
+
     </div>
 
-    <p>Character biography content goes here.</p>
+    <!-- Center Column: Background -->
+    <div class="bio-center-column">
+        
+        <div class="background-section">
+            <h3>Background</h3>
+            
+            <div class="background-field">
+                <label>Languages:</label>
+                <input type="text" placeholder="e.g., Cantonese, Street Slang">
+            </div>
+
+            <div class="background-field">
+                <label>Your Original Family Background:</label>
+                <textarea rows="5" placeholder="Urban Homeless. You lived in cars, dumpsters, or abandoned shipping modules. If you were lucky. You were usually hungry, cold, and scared, unless you were tough enough to fight for the scraps. Education? School of Hard Knocks."></textarea>
+            </div>
+
+            <div class="background-field">
+                <label>Childhood Environment:</label>
+                <textarea rows="3" placeholder="In a Drift Nation (a floating offshore city) that is a meeting place for all kinds of people."></textarea>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Right Column: Relationships and Identity -->
+    <div class="bio-right-column">
+        
+        <!-- Friends Section -->
+        <div class="relationship-table">
+            <h4>Friends</h4>
+            <table>
+                <tbody>
+                    <tr><td><input type="text" placeholder="Friend 1"></td></tr>
+                    <tr><td><input type="text" placeholder="Friend 2"></td></tr>
+                    <tr><td><input type="text" placeholder="Friend 3"></td></tr>
+                    <tr><td><input type="text" placeholder="Friend 4"></td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Tragic Love Affairs -->
+        <div class="relationship-table">
+            <h4>Tragic Love Affairs</h4>
+            <table>
+                <tbody>
+                    <tr><td><input type="text" placeholder="Love affair 1"></td></tr>
+                    <tr><td><input type="text" placeholder="Love affair 2"></td></tr>
+                    <tr><td><input type="text" placeholder="Love affair 3"></td></tr>
+                    <tr><td><input type="text" placeholder="Love affair 4"></td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Enemies Table -->
+        <div class="enemies-table">
+            <h4>Enemies</h4>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Who?</th>
+                        <th>What Caused</th>
+                        <th>What Can They Throw at You?</th>
+                        <th>What's Gonna Happen?</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Aliase Section -->
+        <div class="aliase-section">
+            <h4>Aliase</h4>
+            <div class="aliase-grid">
+                <div class="aliase-row">
+                    <label>Improvement Points</label>
+                    <span class="stat-label-small">CURRENT</span>
+                    <input type="text" class="small-input">
+                    <span class="stat-label-small">OUT OF</span>
+                    <input type="text" class="small-input">
+                    <label>Reputation Events</label>
+                </div>
+                <div class="aliase-row">
+                    <label>Reputation</label>
+                    <textarea rows="2"></textarea>
+                </div>
+            </div>
+        </div>
+
+        <!-- Identity Features -->
+        <div class="identity-section">
+            <h4>Identity ng Features</h4>
+            
+            <div class="identity-field">
+                <label>Your (General) Cultural Region:</label>
+                <input type="text" placeholder="e.g., East Asian">
+            </div>
+
+            <div class="identity-field">
+                <label>Clothing Style:</label>
+                <input type="text" placeholder="e.g., Bohemian (Folksy, Retro, Free-spirited)">
+            </div>
+
+            <div class="identity-field">
+                <label>Hairstyle:</label>
+                <input type="text" placeholder="e.g., Striped">
+            </div>
+
+            <div class="identity-field">
+                <label>Affectation You Are Never Without:</label>
+                <input type="text" placeholder="e.g., Tongue or other piercings">
+            </div>
+        </div>
+
+    </div>
+
 </div>
