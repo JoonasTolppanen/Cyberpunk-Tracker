@@ -16,6 +16,11 @@ document.addEventListener("DOMContentLoaded", () => {
                     window.loadBioDataToDisplay();
                 } else if (page === 'bio-edit.html' && typeof window.loadBioDataToEdit === 'function') {
                     window.loadBioDataToEdit();
+                } else if (page === 'inventory.html') {
+                    // Load inventory data and initialize
+                    if (typeof window.initializeInventory === 'function') {
+                        window.initializeInventory();
+                    }
                 }
             })
             .catch(() => {
