@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Test - Cyberpunk Tracker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+            background: #1a1a1a;
+            color: #0f0;
+        }
+        h1 {
+            color: #00ff00;
+            border-bottom: 2px solid #0f0;
+            padding-bottom: 10px;
+        }
+        .test-section {
+            background: #2a2a2a;
+            border: 1px solid #0f0;
+            border-radius: 5px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        button {
+            background: #0f0;
+            color: #000;
+            border: none;
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            border-radius: 3px;
+        }
+        button:hover {
+            background: #0ff;
+        }
+        .result {
+            background: #000;
+            border: 1px solid #0f0;
+            padding: 15px;
+            margin-top: 10px;
+            border-radius: 3px;
+            white-space: pre-wrap;
+            font-family: monospace;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+        .success {
+            color: #0f0;
+        }
+        .error {
+            color: #f00;
+        }
+        .info {
+            color: #ff0;
+        }
+    </style>
+</head>
+<body>
+    <h1>🎮 Cyberpunk Tracker API Test</h1>
+    
+    <div class="test-section">
+        <h2>Health Check</h2>
+        <button onclick="testHealth()">Test /api/health</button>
+        <div id="health-result" class="result"></div>
+    </div>
+
+    <div class="test-section">
+        <h2>List Characters</h2>
+        <button onclick="testListCharacters()">Test /api/characters</button>
+        <div id="list-result" class="result"></div>
+    </div>
+
+    <div class="test-section">
+        <h2>Get Character Details</h2>
+        <button onclick="testGetCharacter()">Test /api/character/1</button>
+        <div id="get-result" class="result"></div>
+    </div>
+
+    <div class="test-section">
+        <h2>Update Character</h2>
+        <button onclick="testUpdateCharacter()">Test PUT /api/character/1</button>
+        <div id="update-result" class="result"></div>
+    </div>
+
+    <script>
+        const API_URL = 'http://localhost:5000/api';
+
+        function displayResult(elementId, data, isError = false) {
+            const element = document.getElementById(elementId);
+            const className = isError ? 'error' : 'success';
+            element.innerHTML = `<span class="${className}">${JSON.stringify(data, null, 2)}</span>`;
+        }
+
+        function displayError(elementId, error) {
+            const element = document.getElementById(elementId);
+            element.innerHTML = `<span class="error">❌ Error: ${error.message}\n\n${error.stack || ''}</span>
+<span class="info">\n💡 Make sure the API server is running:\n   cd api\n   python3 app.py</span>`;
+        }
+
+        async function testHealth() {
+            try {
+                const response = await fetch(`${API_URL}/health`);
+                const data = await response.json();
+                displayResult('health-result', data);
+            } catch (error) {
+                displayError('health-result', error);
+            }
+        }
+
+        async function testListCharacters() {
+            try {
+                const response = await fetch(`${API_URL}/characters`);
+                const data = await response.json();
+                displayResult('list-result', data);
+            } catch (error) {
+                displayError('list-result', error);
+            }
+        }
+
+        async function testGetCharacter() {
+            try {
+                const response = await fetch(`${API_URL}/character/1`);
+                const data = await response.json();
+                displayResult('get-result', data);
+            } catch (error) {
+                displayError('get-result', error);
+            }
+        }
+
+        async function testUpdateCharacter() {
+            try {
+                const payload = {
+                    character: {
+                        handle: 'V (Updated)',
+                        notes: 'Updated from API test at ' + new Date().toISOString()
+                    }
+                };
+                
+                const response = await fetch(`${API_URL}/character/1`, {
+                    method: 'PUT',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(payload)
+                });
+                
+                const data = await response.json();
+                displayResult('update-result', {
+                    request: payload,
+                    response: data
+                });
+            } catch (error) {
+                displayError('update-result', error);
+            }
+        }
+
+        // Auto-test on load
+        window.addEventListener('load', () => {
+            console.log('API Test page loaded');
+            console.log('Click buttons to test API endpoints');
+        });
+    </script>
+</body>
+</html>
