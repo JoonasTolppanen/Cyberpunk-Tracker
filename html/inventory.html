@@ -1,4 +1,87 @@
-<div>
-    <h1>Inventory</h1>
-    <p>Weapons, gear, cyberware, and items go here.</p>
+<div class="inventory-container">
+    
+    <!-- Left Panel: Category Buttons -->
+    <div class="inventory-left-panel">
+        <button class="inventory-category-btn active" data-category="all">All</button>
+        <button class="inventory-category-btn" data-category="weapons">Weapons & Ammo</button>
+        <button class="inventory-category-btn" data-category="vehicles">Vehicles</button>
+        <button class="inventory-category-btn" data-category="equipment">Equipment</button>
+        <button class="inventory-category-btn" data-category="cyberware">Cyberware</button>
+        <button class="inventory-category-btn" data-category="misc">Miscellaneous</button>
+    </div>
+
+    <!-- Center Panel: Items List -->
+    <div class="inventory-center-panel">
+        <div class="inventory-section" id="all-section">
+            <h3>Kun avaa inventory niin default sivulla "Kaikki".</h3>
+            <p>Kun tavaraaa klikkaa avaa tähän tiedot siilo oikeelle puolelle.</p>
+        </div>
+
+        <!-- Weapons & Ammo Section -->
+        <div class="inventory-section hidden" id="weapons-section">
+            <h4>Weapons & Ammo</h4>
+            <div class="inventory-items-list">
+                <div class="inventory-item" data-item-id="weapon-1">
+                    <span class="item-name">Katakana asetta</span>
+                    <span class="item-quantity">(1)</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Vehicles Section -->
+        <div class="inventory-section hidden" id="vehicles-section">
+            <h4>Vehicles</h4>
+            <div class="inventory-items-list">
+                <div class="inventory-item" data-item-id="vehicle-1">
+                    <span class="item-name">Vehicle 1</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Equipment Section -->
+        <div class="inventory-section hidden" id="equipment-section">
+            <h4>Equipment</h4>
+            <div class="inventory-items-list">
+                <div class="inventory-item" data-item-id="equipment-1">
+                    <span class="item-name">Test 1</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cyberware Section -->
+        <div class="inventory-section hidden" id="cyberware-section">
+            <h4>Cyberware</h4>
+            <div class="inventory-items-list">
+                <div class="inventory-item" data-item-id="cyberware-1">
+                    <span class="item-name">Kyberware 1</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Misc Section -->
+        <div class="inventory-section hidden" id="misc-section">
+            <h4>Miscellaneous</h4>
+            <div class="inventory-items-list">
+                <div class="inventory-item" data-item-id="misc-1">
+                    <span class="item-name">Misc Item</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Right Panel: Item Info -->
+    <div class="inventory-right-panel">
+        <div class="item-info-display">
+            <div class="item-header">
+                <h2 id="info-name">Choose an item</h2>
+                <span class="item-quantity-badge"><span class="qty-label">QTY:</span><span id="info-quantity">0</span></span>
+            </div>
+            <p class="item-description" id="info-description">-</p>
+            <div class="item-value">
+                <span class="value-label">Value:</span>
+                <span class="value-amount" id="info-value">-</span>
+            </div>
+        </div>
+    </div>
+
 </div>
