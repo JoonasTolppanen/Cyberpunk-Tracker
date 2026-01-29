@@ -4,13 +4,13 @@ Quick guide for team members to get the project running on their machine.
 
 ---
 
-## 🚀 First Time Setup
+## First Time Setup
 
 ### 1. Clone the Repository
 
 ```bash
 git clone <repository-url>
-cd Softa_2
+cd #Project root folder
 ```
 
 ### 2. Set Up the Database
@@ -20,16 +20,20 @@ The database file (`*.db`) is **NOT** in git (it's in `.gitignore`). Each team m
 ```bash
 cd database
 python3 init_db.py
+or
+python init_db.py
 ```
 
 This creates `cyberpunk_tracker.db` with all tables defined in `schema.sql`.
 
-### 3. Add Example Data (Optional)
+### 3. Add Example Data
 
 Load sample characters and data for testing:
 
 ```bash
 python3 example_data.py
+or
+python example_data.py
 ```
 
 This creates:
@@ -42,11 +46,15 @@ This creates:
 ```bash
 cd ../api
 pip3 install -r requirements.txt
+or
+pip install -r requirements.txt
 ```
 
 Or manually:
 ```bash
 pip3 install Flask flask-cors
+or
+pip install Flask flask-cors
 ```
 
 ### 5. Start the Servers
@@ -55,21 +63,27 @@ pip3 install Flask flask-cors
 ```bash
 cd api
 python3 app.py
+or
+python app.py
 ```
 
 **Terminal 2 - Web Server:**
+Open a new terminal window
+
 ```bash
-cd Softa_2  # project root
+cd #project root folder
 python3 -m http.server 8080
+or
+python -m http.server 8080
 ```
 
 ### 6. Open the Website
 
-Navigate to: `http://localhost:8080/html/index.html`
+Open in browser: `http://localhost:8080/html/index.html`
 
 ---
 
-## 📋 Quick Start (One Command)
+## Quick Start (One Command)
 
 ```bash
 cd api
@@ -80,18 +94,22 @@ Then open `http://localhost:8080/html/index.html`
 
 ---
 
-## 🔄 Daily Workflow
+## Daily Workflow
 
 ### Starting Work
 
 ```bash
 # Terminal 1
 cd api && python3 app.py
+or
+cd api && python app.py
 
 # Terminal 2  
-python3 -m http.server 8080
+python3 -m http.server 
+or
+python -m http.server 8080
 
-# Open browser: http://localhost:8080/html/index.html
+Open in browser: http://localhost:8080/html/index.html
 ```
 
 ### Pull Latest Changes
@@ -109,28 +127,7 @@ python3 init_db.py       # Recreate with new schema
 python3 example_data.py  # Reload sample data
 ```
 
----
-
-## 📂 What's in Git vs Not
-
-### ✅ In Git (Shared)
-
-- **Schema**: `database/schema.sql` - Database structure
-- **Code**: All `.py`, `.js`, `.html`, `.css` files
-- **Scripts**: `init_db.py`, `example_data.py`, `db_helper.py`
-- **Docs**: README files and documentation
-
-### ❌ NOT in Git (Local Only)
-
-- **Database files**: `*.db`, `*.sqlite`
-- **Python cache**: `__pycache__/`, `*.pyc`
-- **Virtual environments**: `venv/`, `env/`
-- **IDE settings**: `.vscode/`, `.idea/`
-- **Logs**: `*.log`
-
----
-
-## 🛠️ Making Database Changes
+## Making Database Changes
 
 ### If You Need to Change the Schema:
 
@@ -162,7 +159,7 @@ python3 example_data.py  # If you want sample data
 
 ---
 
-## 🧪 Testing Your Setup
+## Testing Your Setup
 
 ### 1. Test Database Connection
 
@@ -189,7 +186,7 @@ Expected: See character bio page with data loaded
 
 ---
 
-## 🐛 Troubleshooting
+## Troubleshooting
 
 ### "Database not found"
 
@@ -243,7 +240,7 @@ python3 app.py
 
 ---
 
-## 👥 Team Coordination
+## Team Coordination
 
 ### When Working on Database Schema:
 
@@ -262,7 +259,7 @@ python3 app.py
 
 ---
 
-## 📁 Project Structure Reference
+## Project Structure Reference
 
 ```
 Softa_2/
@@ -295,7 +292,7 @@ Softa_2/
 
 ---
 
-## 🎯 Summary
+## Summary
 
 **For new team members:**
 1. Clone repo

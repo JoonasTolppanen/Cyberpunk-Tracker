@@ -1,26 +1,11 @@
 # Cyberpunk-Tracker
 Ohjelmistotuotanto 2 projekti
 
-A web-based character tracker for Cyberpunk RED RPG campaigns.
+A web-based character tracker for Cyberpunk RED TTRPG.
 
-## 🚀 Quick Start for Team Members
+## Quick Start for Team Members
 
 **New to the project?** See **[SETUP.md](SETUP.md)** for complete setup instructions.
-
-**TL;DR:**
-```bash
-# 1. Create database
-cd database && python3 init_db.py && python3 example_data.py
-
-# 2. Install dependencies
-cd ../api && pip3 install Flask flask-cors
-
-# 3. Start servers
-python3 app.py  # Terminal 1
-cd .. && python3 -m http.server 8080  # Terminal 2
-
-# 4. Open browser: http://localhost:8080/html/index.html
-```
 
 ## Features
 
@@ -35,7 +20,7 @@ cd .. && python3 -m http.server 8080  # Terminal 2
 ## Project Structure
 
 ```
-Softa_2/
+Cyberpunk-Tracker/
 ├── html/              # HTML pages
 │   ├── index.html     # Main entry point
 │   ├── bio.html       # Character biography display
@@ -47,9 +32,9 @@ Softa_2/
 │   └── styles.css
 ├── js/                # JavaScript files
 │   ├── navigation.js     # Page navigation
-│   ├── bio-data.js       # Data management (localStorage - legacy)
-│   └── bio-data-db.js    # Data management (database-backed) ✨ NEW
-├── api/               # Flask REST API ✨ NEW
+│   ├── bio-data.js       # Data management - localStorage - legacy
+│   └── bio-data-db.js    # Data management - database-backed
+├── api/               # Flask REST API
 │   ├── app.py            # API server
 │   ├── requirements.txt  # Python dependencies
 │   ├── start_server.sh   # Quick start script
@@ -218,11 +203,3 @@ This project is part of Ohjelmistotuotanto 2 (Software Engineering 2) course.
 - 🚧 Stats and skills tracking (coming soon)
 - 🚧 Inventory system (coming soon)
 - 🚧 Combat management (coming soon)
-
-## Technologies
-
-- **Frontend**: HTML/CSS/JavaScript
-- **Backend**: Flask (Python)
-- **Database**: SQLite
-- **API**: RESTful HTTP endpoints
-- **Data Format**: JSON

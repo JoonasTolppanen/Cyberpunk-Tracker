@@ -1,14 +1,14 @@
 # Team Workflow - Quick Reference
 
-## 🔄 How Database Works in This Project
+## How Database Works in This Project
 
 ```
 ┌─────────────────────────────────────────────────────────┐
-│                    Git Repository                        │
+│                    Git Repository                       │
 │  ✅ schema.sql (structure)                              │
 │  ✅ init_db.py (create database)                        │
 │  ✅ example_data.py (sample data)                       │
-│  ❌ *.db files (NOT in git)                            │
+│  ❌ *.db files (NOT in git)                             │ 
 └─────────────────────────────────────────────────────────┘
                           ↓
         ┌─────────────────┴─────────────────┐
@@ -20,7 +20,7 @@
 │      ↓        │                   │      ↓        │
 │  init_db.py   │                   │  init_db.py   │
 │      ↓        │                   │      ↓        │
-│  local.db ⚙️  │                   │  local.db ⚙️  │
+│  local.db     │                   │  local.db     │
 │               │                   │               │
 └───────────────┘                   └───────────────┘
 ```
@@ -29,9 +29,9 @@
 
 ---
 
-## 📋 Common Scenarios
+## Common Scenarios
 
-### 🆕 New Team Member Joins
+### New Team Member Joins
 
 ```bash
 # 1. Clone
@@ -51,7 +51,7 @@ pip3 install Flask flask-cors
 
 ---
 
-### 🔄 Someone Updates the Schema
+### Someone Updates the Schema
 
 **Person making changes:**
 ```bash
@@ -88,7 +88,7 @@ python3 example_data.py
 
 ---
 
-### 📝 Daily Development
+### Daily Development
 
 ```bash
 # Morning:
@@ -107,7 +107,7 @@ git push
 
 ---
 
-### 🧪 Testing Changes
+### Testing Changes
 
 ```bash
 # Test database
@@ -123,23 +123,23 @@ curl http://localhost:5000/api/health
 
 ---
 
-## ⚠️ Important Rules
+## Important Rules
 
-### ✅ DO Commit These:
+### DO Commit These:
 - `schema.sql` - Database structure
 - All `.py`, `.js`, `.html`, `.css` files
 - `requirements.txt`
 - Documentation (`.md` files)
 - Scripts (`init_db.py`, etc.)
 
-### ❌ DON'T Commit These:
+### DO NOT Commit These:
 - `*.db` - Database files
 - `__pycache__/` - Python cache
 - `venv/` - Virtual environments
 - `.vscode/`, `.idea/` - IDE settings
 - Personal test data
 
-### 🔄 When to Recreate Database:
+### When to Recreate Database:
 
 **Recreate after:**
 - Git pull that includes `schema.sql` changes
@@ -155,7 +155,7 @@ curl http://localhost:5000/api/health
 
 ---
 
-## 🤝 Collaboration Tips
+## Collaboration Tips
 
 ### Before Making Schema Changes:
 
@@ -179,7 +179,7 @@ There are no database conflicts! Each person has their own local database. Only 
 
 ---
 
-## 📞 Getting Help
+## Getting Help
 
 **Database Issues:**
 - Check `database/README.md`
@@ -203,9 +203,9 @@ There are no database conflicts! Each person has their own local database. Only 
 
 ---
 
-## 📚 Documentation Index
+## Documentation Index
 
-- **SETUP.md** - Complete setup guide (start here!)
+- **SETUP.md** - Complete setup guide - start here
 - **README.md** - Project overview
 - **api/README.md** - API documentation
 - **database/README.md** - Database documentation
@@ -214,7 +214,7 @@ There are no database conflicts! Each person has their own local database. Only 
 
 ---
 
-## 🎯 Remember
+## Remember
 
 1. **Database files are local** - not in git
 2. **Schema is shared** - in git as `schema.sql`
@@ -223,5 +223,3 @@ There are no database conflicts! Each person has their own local database. Only 
 5. **Coordinate schema changes** with the team
 
 ---
-
-**Questions?** Ask in the team chat or check the documentation! 🚀
